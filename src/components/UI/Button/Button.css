@@ -1,0 +1,41 @@
+.btn{
+    padding: 24px;
+    border-radius: 24px;
+    border: none;
+    width: 50%;
+    background-color: rgb(14, 182, 14);
+    font-size: 1.1rem;
+}
+
+.btn:hover:disabled{
+    cursor:not-allowed;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-left{
+    background-color: #bb1f1f;
+    color: #fff;
+    border: none;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+}
+
+
+.btn-left:disabled{
+    background-color: #bb1f1f8e;
+}
+
+.btn-left:hover:disabled{
+    background-color:#bb1f1fbd
+}
+
+.btn-right{
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    /* padding: 10px 20px */
+    cursor: pointer;
+}

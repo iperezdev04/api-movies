@@ -1,0 +1,32 @@
+.movieList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    /* margin: 0 auto; */
+}
+
+.card{
+    width: 16em;
+    border: 1px solid black;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    box-shadow: 0 3px 3px #0000007f;
+}
+
+.card-img-top{
+    width: 256px;
+    height: 384px;
+    object-fit:contain;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+.card-body{
+    padding:12px;
+}
+
+.card:hover{
+    cursor: pointer;
+}
