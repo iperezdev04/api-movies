@@ -27,7 +27,7 @@
     padding:12px;
 }
 
-.card:hover{
+.card-img-top:hover{
     cursor: pointer;
 }
 
