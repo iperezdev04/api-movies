@@ -39,3 +39,15 @@
     /* padding: 10px 20px */
     cursor: pointer;
 }
+
+
+/*RESPONSIVE*/
+
+/*CELULARES*/
+@media screen and (max-width: 576px) {
+    .btn{
+        width: 85%;
+        padding: 12px;
+    }
+
+}

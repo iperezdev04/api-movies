@@ -20,3 +20,18 @@
     gap: 8px;
     width: 90%;
 }
+
+/*RESPONSIVE*/
+
+/*CELULARES*/
+@media screen and (max-width: 576px) {
+    .container{
+        width: auto;
+    }
+
+    .button-group{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
