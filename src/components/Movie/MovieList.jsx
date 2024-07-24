@@ -8,8 +8,8 @@ const MovieList = ({ movies }) => {
     return (
             <div className="movieList">
                 {
-                    movies.map(({ id, title,poster_path,release_date }) => (
-                        <MovieCard key={id} title={title} release_date={release_date} poster_path={poster_path} />
+                    movies.map(({ id, title,image,release_date,genre }) => (
+                        <MovieCard key={id} title={title} release_date={release_date} image={image} genre={genre} />
                     ))
                 }
             </div>

@@ -18,6 +18,7 @@ function App() {
 
 
   const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+  const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`;
   useEffect(() => {
 
     if (cache[page]) {
@@ -34,15 +35,44 @@ function App() {
     try {
       const response = await fetch(url + `&language=es-MX&page=${page}`);
       const data = await response.json();
-      setMovies(data.results)
-      setCache((prevCache) => ({ ...prevCache, [page]: data.results }));
-      console.log(cache)
+      const genres = await getGenres();
+
+      console.log(genres)
+
+      const results = data.results.map(movie => ({
+        id: movie.id,
+        title: movie.title,
+        genre: movie.genre_ids.map(id => ({
+          id: genres.find(genre => genre.id === id).id,
+          name: genres.find(genre => genre.id === id).name
+        })),
+        image: `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+      }));;
+
+      setMovies(results)
+      setCache((prevCache) => ({ ...prevCache, [page]: results }));
+      // console.log("cache:",cache)
+      // console.log("results:",results);
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
     }
   }
+
+  const getGenres = async () => {
+
+    // const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`;
+
+
+    try {
+      const response = await fetch(genreUrl);
+      const data = await response.json();
+      return data.genres;
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
