@@ -1,7 +1,6 @@
 import React from "react";
 
 const MovieCard = ({ title, image, release_date, genre }) => {
-    console.log("genre", genre);
     return (
         <div className="card" >
             <img className="card-img-top" src={image} width="256px" height="384px" alt="Card image cap" />

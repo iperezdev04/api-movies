@@ -26,9 +26,7 @@ export const ApiProvider = ({children}) => {
         const response = await fetch(url + `&language=es-MX&page=${page}`);
         const data = await response.json();
         const genres = await getGenres();
-  
-        console.log(genres)
-  
+    
         const results = data.results.map(movie => ({
           id: movie.id,
           title: movie.title,
