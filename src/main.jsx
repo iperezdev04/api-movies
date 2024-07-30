@@ -4,9 +4,15 @@ import App from './App.jsx'
 import './index.css'
 import { ApiProvider } from './context/Apicontext.jsx'
 
+
+import { BrowserRouter as Router } from 'react-router-dom'
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <ApiProvider>
-        <App />
+        <Router>
+            <App />
+        </Router>
     </ApiProvider>
 
 )
