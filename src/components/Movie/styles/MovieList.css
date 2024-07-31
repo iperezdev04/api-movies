@@ -29,6 +29,10 @@
     border-top-right-radius: 24px;
 }
 
+.card-img-top:hover{
+    cursor: pointer;
+}
+
 .card-body{
     padding: 15px;
 }

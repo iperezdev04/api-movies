@@ -1,12 +1,12 @@
 import Home from "./Home";
 import { Routes, Route } from 'react-router-dom'
-// import { CharacterPage } from "./components/pages/CharacterPage";
+import { MovieID } from "./pages/MovieID";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/character/:id" element={<CharacterPage />} /> */}
+      <Route path="/movie/:id" element={<MovieID/>} />
     </Routes>
   );
 }
