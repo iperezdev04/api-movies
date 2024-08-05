@@ -8,7 +8,7 @@ export const MovieID = () => {
 
     useEffect(() => {
         fetchMovieById();
-    }, [id]);
+    }, []);
 
 
     const fetchMovieById= () =>{
@@ -30,7 +30,7 @@ export const MovieID = () => {
     }
    
 
-    console.log(movie.title)
+    // console.log(movie.title)
 
     return (
         <div className="movie">
